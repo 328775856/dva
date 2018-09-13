@@ -8,30 +8,30 @@
 // connect
 import React from 'react'
 import {connect} from 'dva'
-import ProductList from '../components/ProductList'
+import CountCompo from '../components/count'
 
-const Products = ({dispatch, products}) => {
+const Count = ({dispatch, count}) => {
   function handleDelete(id) {
     dispatch({
-      type: 'products/delete',
+      type: 'count/delete',
       payload: id
     })
   }
   function add(id){
     dispatch({
-      type: 'products/add',
+      type: 'count/add',
       payload: id
     })
   }
 
   return (
     <div>
-      <h2>List of Products</h2>
-      <ProductList onDelete={handleDelete} products={products} add={add}/>
+      <h2>List of count</h2>
+      <CountCompo onDelete={handleDelete} count={count} add={add}/>
     </div>
   )
 }
-export default connect(({products}) => ({
-  products
-}))(Products)
+export default connect(({count}) => ({
+  count
+}))(Count)
 
