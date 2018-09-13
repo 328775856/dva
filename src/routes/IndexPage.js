@@ -1,13 +1,19 @@
 import React from 'react';
-import { connect } from 'dva';
+import {connect} from 'dva';
 import styles from './IndexPage.css';
+import Test from '../routes/Test';
 
 function IndexPage() {
+  function add() {
+    alert('onIncrement')
+  }
+
   return (
     <div className={styles.normal}>
       <h1 className={styles.title}>Yay! Welcome to dva!</h1>
-      <div className={styles.welcome} />
+      <div className={styles.welcome}/>
       <ul className={styles.list}>
+        <Test value='sdf' onIncrement={add}/>
         <li>To get started, edit <code>src/index.js</code> and save to reload.</li>
         <li><a href="https://github.com/dvajs/dva-docs/blob/master/v1/en-us/getting-started.md">Getting Started</a></li>
       </ul>
@@ -15,7 +21,6 @@ function IndexPage() {
   );
 }
 
-IndexPage.propTypes = {
-};
+IndexPage.propTypes = {};
 
 export default connect()(IndexPage);

@@ -3,6 +3,7 @@ import {Router, Route, Switch} from 'dva/router';
 import IndexPage from './routes/IndexPage';
 import Products from './routes/Products'
 import Count from './routes/count'
+import Test from './routes/Test'
 
 function RouterConfig({history}) {
   return (
@@ -13,6 +14,7 @@ function RouterConfig({history}) {
         </Switch>
         <Route path="/products" exact component={Products}/>
         <Route path="/count" exact component={Count}/>
+        <Route path="/test" exact component={Test}/>
       </div>
     </Router>
   );
