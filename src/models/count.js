@@ -3,7 +3,6 @@ export default {
   state: [],
   reducers: {
     'delete'(state,action) {
-      console.log(action)
       return state - 1
     },
     'add'(state) {

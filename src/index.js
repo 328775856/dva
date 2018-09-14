@@ -3,14 +3,18 @@ import './index.css';
 
 // 1. Initialize
 const app = dva({
-  initialState:{
+  initialState: {
     products: [
-      {name: 'dva', id:1},
-      {name: '1', id:2},
-      {name: '2', id:3},
-      {name: '3', id:4},
+      {name: 'dva', id: 1},
+      {name: '1', id: 2},
+      {name: '2', id: 3},
+      {name: '3', id: 4},
     ],
-    count: 0
+    count: 0,
+    list: [
+      {name: 1, id: 1},
+      {name: 2, id: 2},
+    ]
   }
 })
 // 2. Plugins
@@ -20,6 +24,7 @@ const app = dva({
 // app.model(require('./models/example').default);
 app.model(require('./models/products').default)
 app.model(require('./models/count').default)
+app.model(require('./models/list').default)
 
 // 4. Router
 app.router(require('./router').default);

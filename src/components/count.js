@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Table, Button} from 'antd'
+import { Button} from 'antd'
 import Style from './count.css'
 
 const ProductList = ({onDelete, count, add}) => {
-
   return (
     <div>
       <div className={Style.add}>{count}</div>
