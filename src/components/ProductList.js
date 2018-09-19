@@ -11,7 +11,7 @@ const ProductList = ({onDelete, products, add}) => {
     render: (text, record) => {
        console.log(record)
       return (
-        <Popconfirm title="Delete?" onConfirm={() => onDelete(record.id)}>
+        <Popconfirm rowKey={text} title="Delete?" onConfirm={() => onDelete(record.id)}>
           <Button>Delete</Button>
         </Popconfirm>
       )
@@ -30,6 +30,7 @@ const ProductList = ({onDelete, products, add}) => {
   return (
     <div>
       <Table
+        rowKey={record=>record.id}
         dataSource={products}
         columns={columns}
       />

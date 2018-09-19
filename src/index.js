@@ -3,19 +3,6 @@ import './index.css';
 
 // 1. Initialize
 const app = dva({
-  initialState: {
-    products: [
-      {name: 'dva', id: 1},
-      {name: '1', id: 2},
-      {name: '2', id: 3},
-      {name: '3', id: 4},
-    ],
-    count: 0,
-    list: [
-      {name: 1, id: 1},
-      {name: 2, id: 2},
-    ]
-  }
 })
 // 2. Plugins
 // app.use({});

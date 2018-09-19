@@ -5,7 +5,7 @@
 // );
 // export default Products;
 
-// connect
+// cn
 import {Component } from 'react'
 export default class Counter extends Component {
   render(){

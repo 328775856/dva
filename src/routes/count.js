@@ -5,7 +5,7 @@
 // );
 // export default Products;
 
-// connect
+// cn
 import React from 'react'
 import {connect} from 'dva'
 import CountCompo from '../components/count'

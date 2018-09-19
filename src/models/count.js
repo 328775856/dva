@@ -1,6 +1,6 @@
 export default {
   namespace: 'count',
-  state: [],
+  state: 2,
   reducers: {
     'delete'(state,action) {
       return state - 1
